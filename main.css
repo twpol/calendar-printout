@@ -1,0 +1,45 @@
+html {
+    --background: #fff;
+    --foreground: #000;
+    --line-thickness: 1px;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+table.yearly-month-per-page {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: calc(100vh / 32 / 1.6);
+    line-height: 1;
+    margin: 0.5em;
+    page-break-after: always;
+    width: calc(100% - 1em);
+}
+table.yearly-month-per-page,
+table.yearly-month-per-page th,
+table.yearly-month-per-page td {
+    border: var(--line-thickness) solid var(--foreground);
+}
+table.yearly-month-per-page th,
+table.yearly-month-per-page td {
+    font-weight: normal;
+    padding: 0.25em 0.5em;
+    white-space: nowrap;
+}
+table.yearly-month-per-page col.rows {
+    width: 1%;
+}
+table.yearly-month-per-page col.separate {
+    border-left: calc(4 * var(--line-thickness)) solid var(--foreground);
+}
+table.yearly-month-per-page tr.separate {
+    border-top: calc(4 * var(--line-thickness)) solid var(--foreground);
+}
+table.yearly-month-per-page .highlight {
+    background: lightgray;
+}
